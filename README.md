@@ -37,19 +37,24 @@ To run this project you should have the [Prerequisites](#Prerequisites)
 This command will start the Grafana and the InfluxDB.
 
 2. Start the application you want to measure.\
-For example: go to [demo folder](demo) and run this command:
 
-`./mvnw spring-boot:run`
+* Demo without loom, using Java 17
+
+`docker-compose --profile demo up`
+
+* Demo with loom, using Java 21
+
+`docker-compose --profile demo-loom up`
 
 3. Run K6 to generate the data
 
-If you are using [demo-loom project](demo-loom) use this command
-
-`docker-compose run k6 run /scripts/http-get-loom.js`
-
-If you are using [demo project](demo) use this command
+* If you are testing [demo project](demo) use this command
 
 `docker-compose run k6 run /scripts/http-get.js`
+
+* If you are testing [demo-loom project](demo-loom) use this command
+
+`docker-compose run k6 run /scripts/http-get-loom.js`
 
 4. See the results in Grafana.
 

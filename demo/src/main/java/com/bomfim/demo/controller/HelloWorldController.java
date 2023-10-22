@@ -21,6 +21,8 @@ public class HelloWorldController {
     public String helloWorldMany() throws ExecutionException, InterruptedException {
         CompletableFuture.allOf(
                 CompletableFuture.runAsync(HelloWorldController::getSleep),
+                CompletableFuture.runAsync(HelloWorldController::getSleep),
+                CompletableFuture.runAsync(HelloWorldController::getSleep),
                 CompletableFuture.runAsync(HelloWorldController::getSleep)
         ).get();
 
