@@ -9,6 +9,35 @@ The goal of this project is to see some differences between Java 17 and Java 21 
 * Demo
 * Demo Loom
 
+### Results
+
+#### 200 requests per second
+```
+200 VUs
+200 requests per second
+30 s Duration
+```
+![200-requests-second.png](images/200-requests-second.png)
+
+#### 500 requests per second
+```
+500 VUs
+500 requests per second
+30 s Duration
+```
+![500-requests-second.png](images/500-requests-second.png)
+
+
+#### 1000 requests per second
+```
+1000 VUs
+1000 requests per second
+30 s Duration
+```
+![1000-requests-second.png](images/1000-requests-second.png)
+
+
+
 ## Built With
 
 * Java 17 and Java 21
